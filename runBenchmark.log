@@ -1,0 +1,205 @@
+--------------------------------------------------------
+C:\Users\YuukiE\Documents\CX\workspace\Benchmark>\demo\cxiast-java-agent\CxIAST.bat -e runBenchmark.bat
+COMMAND: [cmd.exe, /c, runBenchmark.bat]
+ENV: {JAVA_TOOL_OPTIONS=-javaagent:"C:\demo\cxiast-java-agent\cx-launcher.jar" -Xverify:none}
+
+C:\Users\YuukiE\Documents\CX\workspace\Benchmark>call mvn clean package cargo:run -Pdeploy
+Picked up JAVA_TOOL_OPTIONS: -javaagent:"C:\demo\cxiast-java-agent\cx-launcher.jar" -Xverify:none
+[INFO] BuildTimeEventSpy is registered.
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------< org.owasp:benchmark >-------------------------
+[INFO] Building OWASP Benchmark Project 1.2
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ benchmark ---
+[INFO] Deleting C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target
+[INFO]
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce-bytecode-version) @ benchmark ---
+[INFO] Adding ignore: module-info
+[INFO]
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce-jdk-version) @ benchmark ---
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ benchmark ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 36 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ benchmark ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2816 source files to C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ benchmark ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\YuukiE\Documents\CX\workspace\Benchmark\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ benchmark ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ benchmark ---
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- maven-war-plugin:2.6:war (default-war) @ benchmark ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [benchmark] in [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\benchmark]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\src\main\webapp]
+[INFO] Webapp assembled in [64378 msecs]
+[INFO] Building war: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\benchmark.war
+[INFO]
+[INFO] --- maven-antrun-plugin:1.8:run (ldap-server) @ benchmark ---
+[INFO] Executing tasks
+
+main:
+
+run:
+[INFO] Executed tasks
+[INFO]
+[INFO] --- maven-antrun-plugin:1.8:run (database-server) @ benchmark ---
+[INFO] Executing tasks
+
+main:
+
+databaseServer:
+[INFO] Executed tasks
+[INFO]
+[INFO] --- maven-antrun-plugin:1.8:run (database-init) @ benchmark ---
+[INFO] Executing tasks
+
+main:
+
+databaseInit:
+[INFO] Executed tasks
+[INFO]
+[INFO] --- cargo-maven2-plugin:1.7.3:run (default-cli) @ benchmark ---
+[Server@1bb87742]: Startup sequence initiated from main() method
+[Server@1bb87742]: Could not load properties from file
+[Server@1bb87742]: Using cli/default properties only
+[Server@1bb87742]: Initiating startup sequence...
+[Server@1bb87742]: Server socket opened successfully in 3 ms.
+[INFO] [en2.ContainerRunMojo] Resolved container artifact org.codehaus.cargo:cargo-core-container-tomcat:jar:1.7.3 for container tomcat8x
+[Server@1bb87742]: Database [index=0, id=0, db=file:target/db/benchmark.db, alias=benchmarkdatabase] opened successfully in 719 ms.
+[Server@1bb87742]: Startup sequence completed in 738 ms.
+[Server@1bb87742]: 2020-02-25 22:31:36.816 HSQLDB server 2.3.6 is online on port 9001
+[Server@1bb87742]: To close normally, connect and execute SHUTDOWN SQL
+[Server@1bb87742]: From command line, use [Ctrl]+[C] to abort abruptly
+     [java] Picked up JAVA_TOOL_OPTIONS: -javaagent:"C:\demo\cxiast-java-agent\cx-launcher.jar" -Xverify:none
+[INFO] [talledLocalContainer] Tomcat 8.x starting...
+[INFO] [stalledLocalDeployer] Deploying [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\benchmark.war] to [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps]...
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Server version:        Apache Tomcat/8.5.40
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Server built:          Apr 10 2019 14:31:19 UTC
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Server number:         8.5.40.0
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: OS Name:               Windows 10
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: OS Version:            10.0
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Architecture:          amd64
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_231\jre
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: JVM Version:           1.8.0_231-b11
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: JVM Vendor:            Oracle Corporation
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: CATALINA_BASE:         C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: CATALINA_HOME:         C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\installs\apache-tomcat-8.5.40\apache-tomcat-8.5.40
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -javaagent:C:\demo\cxiast-java-agent\cx-launcher.jar
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Xverify:none
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Xms128m
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Xmx512m
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Dcatalina.home=C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\installs\apache-tomcat-8.5.40\apache-tomcat-8.5.40
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Dcatalina.base=C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Djava.io.tmpdir=C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\temp
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.startup.VersionLoggerListener log
+[INFO] [talledLocalContainer] INFO: Command line argument: -Djava.util.logging.config.file=C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\conf/logging.properties
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:01 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+[INFO] [talledLocalContainer] INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_231\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\ProgramData\chocolatey\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.2\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files (x86)\Webex\Plugins;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Program Files\CxIAST\Manager\lib;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\YuukiE\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Users\YuukiE;C:\Users\YuukiE\AppData\Roaming\npm;C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin;C:\Program Files\Docker\Docker;C:\Users\YuukiE\.dotnet\tools;C:\Program Files\chromedriver;C:\ApplicationInspector_windows_1.0.22;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.2\bin;;C:\gradle\bin;;.]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:02 PM org.apache.coyote.AbstractProtocol init
+[INFO] [talledLocalContainer] INFO: Initializing ProtocolHandler ["https-jsse-nio-127.0.0.1-9443"]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+[INFO] [talledLocalContainer] INFO: Using a shared selector for servlet write/read
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.coyote.AbstractProtocol init
+[INFO] [talledLocalContainer] INFO: Initializing ProtocolHandler ["ajp-nio-127.0.0.1-8009"]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+[INFO] [talledLocalContainer] INFO: Using a shared selector for servlet write/read
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.catalina.startup.Catalina load
+[INFO] [talledLocalContainer] INFO: Initialization processed in 12348 ms
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.catalina.core.StandardService startInternal
+[INFO] [talledLocalContainer] INFO: Starting service [Catalina]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.catalina.core.StandardEngine startInternal
+[INFO] [talledLocalContainer] INFO: Starting Servlet Engine: Apache Tomcat/8.5.40
+[INFO] [talledLocalContainer] Feb 25, 2020 10:32:07 PM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] [talledLocalContainer] INFO: Deploying web application archive [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\benchmark.war]
+     [java] 2020-02-25 22:32:15 ERROR DefaultServerAttribute:368 - ERR_04450 The value {0} is incorrect, it hasnt been added
+     [java] 2020-02-25 22:32:16 ERROR DefaultServerAttribute:368 - ERR_04450 The value {0} is incorrect, it hasnt been added
+     [java] ESAPI: WARNING: System property [org.owasp.esapi.opsteam] is not set
+     [java] ESAPI: WARNING: System property [org.owasp.esapi.devteam] is not set
+     [java] ESAPI: Attempting to load ESAPI.properties via file I/O.
+     [java] ESAPI: Attempting to load ESAPI.properties as resource file via file I/O.
+     [java] ESAPI: Not found in 'org.owasp.esapi.resources' directory or file not readable: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\ESAPI.properties
+     [java] ESAPI: Not found in SystemResource Directory/resourceDirectory: .esapi\ESAPI.properties
+     [java] ESAPI: Not found in 'user.home' (C:\Users\YuukiE) directory: C:\Users\YuukiE\esapi\ESAPI.properties
+     [java] ESAPI: Loading ESAPI.properties via file I/O failed. Exception was: java.io.FileNotFoundException
+     [java] ESAPI: Attempting to load ESAPI.properties via the classpath.
+     [java] ESAPI: SUCCESSFULLY LOADED ESAPI.properties via the CLASSPATH from '/ (root)' using current thread context class loader!
+     [java] ESAPI: SecurityConfiguration for Validator.ConfigurationFile.MultiValued not found in ESAPI.properties. Using default: false
+     [java] ESAPI: Attempting to load validation.properties via file I/O.
+     [java] ESAPI: Attempting to load validation.properties as resource file via file I/O.
+     [java] ESAPI: Not found in 'org.owasp.esapi.resources' directory or file not readable: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\validation.properties
+     [java] ESAPI: Not found in SystemResource Directory/resourceDirectory: .esapi\validation.properties
+     [java] ESAPI: Not found in 'user.home' (C:\Users\YuukiE) directory: C:\Users\YuukiE\esapi\validation.properties
+     [java] ESAPI: Loading validation.properties via file I/O failed.
+     [java] ESAPI: Attempting to load validation.properties via the classpath.
+     [java] ESAPI: SUCCESSFULLY LOADED validation.properties via the CLASSPATH from '/ (root)' using current thread context class loader!
+[INFO] [talledLocalContainer] Feb 25, 2020 10:33:56 PM org.apache.catalina.core.ApplicationContext log
+[INFO] [talledLocalContainer] INFO: No Spring WebApplicationInitializer types detected on classpath
+[INFO] [talledLocalContainer] Feb 25, 2020 10:33:56 PM org.apache.jasper.servlet.TldScanner scanJars
+[INFO] [talledLocalContainer] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO] [talledLocalContainer] Initializing benchmark
+[INFO] [talledLocalContainer] DataBase tables/procedures created.
+[INFO] [talledLocalContainer] Spring context init()
+[INFO] [talledLocalContainer] Spring context loaded!
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:02 PM org.apache.catalina.core.ApplicationContext log
+[INFO] [talledLocalContainer] INFO: Initializing Spring FrameworkServlet 'benchmark'
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:06 PM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] [talledLocalContainer] INFO: Deployment of web application archive [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\benchmark.war] has finished in [118,726] ms
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:06 PM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] [talledLocalContainer] INFO: Deploying web application archive [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\cargocpc.war]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:09 PM org.apache.jasper.servlet.TldScanner scanJars
+[INFO] [talledLocalContainer] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:09 PM org.apache.catalina.startup.HostConfig deployWAR
+[INFO] [talledLocalContainer] INFO: Deployment of web application archive [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\cargocpc.war] has finished in [3,126] ms
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] [talledLocalContainer] INFO: Deploying web application directory [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\host-manager]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:12 PM org.apache.jasper.servlet.TldScanner scanJars
+[INFO] [talledLocalContainer] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] [talledLocalContainer] INFO: Deployment of web application directory [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\host-manager] has finished in [2,689] ms
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] [talledLocalContainer] INFO: Deploying web application directory [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\manager]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:15 PM org.apache.jasper.servlet.TldScanner scanJars
+[INFO] [talledLocalContainer] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:15 PM org.apache.catalina.startup.HostConfig deployDirectory
+[INFO] [talledLocalContainer] INFO: Deployment of web application directory [C:\Users\YuukiE\Documents\CX\workspace\Benchmark\target\cargo\configurations\tomcat8x\webapps\manager] has finished in [2,611] ms
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:15 PM org.apache.coyote.AbstractProtocol start
+[INFO] [talledLocalContainer] INFO: Starting ProtocolHandler ["https-jsse-nio-127.0.0.1-9443"]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:15 PM org.apache.coyote.AbstractProtocol start
+[INFO] [talledLocalContainer] INFO: Starting ProtocolHandler ["ajp-nio-127.0.0.1-8009"]
+[INFO] [talledLocalContainer] Feb 25, 2020 10:34:15 PM org.apache.catalina.startup.Catalina start
+[INFO] [talledLocalContainer] INFO: Server startup in 127960 ms
+[INFO] [talledLocalContainer] Tomcat 8.x started on port [9443]
+[INFO] Press Ctrl-C to stop the container...
+

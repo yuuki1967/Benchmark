@@ -1,0 +1,22 @@
+[For windows]
+1. mvn compile
+2. cxIAST.bat -e runBenchmark.bat
+   refer to the log runBenchmark.log
+3.export the anlayzed result to a csv file.
+4.Copy the file to the folder cx_result
+5.createScorecards.bat
+   refer to the log createScorecards.log
+
+ NOTE:
+ Default port info:
+ HTTPS port 9443, Shutdown port 8009
+
+ -If these ports conflict, you need to modify them in server.html and pom.xml
+ 	./pom.xml
+	./src/config/local/server.html
+ 	./src/config/remote/server.html
+
+ -Once you change them, the operation "mvn compile" is required.
+
+ -If CxSAST is running on the same PC, you need to change the shutdown port on server.xml for CxARM. Because you can not change one for Benchmark. 
+

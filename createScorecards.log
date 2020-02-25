@@ -1,0 +1,34 @@
+--------------------------------------------
+C:\Users\YuukiE\Documents\CX\workspace\Benchmark>createScorecards.bat
+
+C:\Users\YuukiE\Documents\CX\workspace\Benchmark>call mvn validate -Pbenchmarkscore -Dexec.args="expectedresults-1.2.csv cx_results"
+[INFO] BuildTimeEventSpy is registered.
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------< org.owasp:benchmark >-------------------------
+[INFO] Building OWASP Benchmark Project 1.2
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce-bytecode-version) @ benchmark ---
+[INFO] Adding ignore: module-info
+[INFO]
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce-jdk-version) @ benchmark ---
+[INFO]
+[INFO] --- exec-maven-plugin:1.6.0:java (default) @ benchmark ---
+Deleting previously generated scorecard files in: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\scorecard
+Getting expected results from: expectedresults-1.2.csv
+Read expected results from file: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\expectedresults-1.2.csv
+2740 results found.
+
+Analyzing results from CxIAST scan_273 results 2020-02-25T14-32-07.168Z.csv
+Computed actual results for tool: CxIAST
+Actual results file generated: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\scorecard\Benchmark_v1.2_Scorecard_for_CxIAST.csv
+Report written to: C:\Users\YuukiE\Documents\CX\workspace\Benchmark\scorecard\Benchmark_v1.2_Scorecard_for_CxIAST.html
+Extra: 352
+Extra: 613
+Extra: 693
+Extra: 250
+Tool scorecards computed.
+Vulnerability scorecards computed.
+Benchmark scorecards complete.
+
