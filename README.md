@@ -8,7 +8,7 @@ The current latest release is v1.2. Note that all the releases that are availabl
 # Benchmark
 Please read HOW_TO_USE for getting the scorecard of analyzed result by CxIAST.
 
-![cxIAST_snapshot](https://github.com/yuuki1967/Benchmark/blob/master/scorecard/CxIAST_snapshot.png
+![cxIAST_snapshot](https://github.com/yuuki1967/Benchmark/blob/master/scorecard/CxIAST_snapshot.png)
 
 # Benchmark Result with CxIAST 3.4.0
 
