@@ -10,4 +10,4 @@ Please read HOW_TO_USE for getting the scorecard of analyzed result by CxIAST.
 
 # Benchmark Result with CxIAST 3.4.0
 
-![scorecard]https://github.com/yuuki1967/Benchmark/blob/master/scorecard/Benchmark_v1.2_Scorecard_for_CxIAST.png
+![scorecard](https://github.com/yuuki1967/Benchmark/blob/master/scorecard/Benchmark_v1.2_Scorecard_for_CxIAST.png)
