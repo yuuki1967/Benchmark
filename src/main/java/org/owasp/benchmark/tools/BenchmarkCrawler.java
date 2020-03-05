@@ -48,7 +48,7 @@ public class BenchmarkCrawler {
 				System.err.println("\n  FAILED: " + e.getMessage());
 				e.printStackTrace();
 			}
-			Thread.sleep(1000); //YE
+//			Thread.sleep(1000); //YE
 		}
 		long stop = System.currentTimeMillis();
 		double seconds = (stop - start) / 1000;
